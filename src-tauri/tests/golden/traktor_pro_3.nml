@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NML VERSION="19">
+  <HEAD COMPANY="www.native-instruments.com" PROGRAM="Traktor"/>
+  <COLLECTION ENTRIES="1">
+    <ENTRY TITLE="A &lt; B" ARTIST="Artist &amp; One">
+      <LOCATION DIR="/:Music/:" FILE="Artist &amp; One - A &lt; B.mp3" VOLUME="C:" VOLUMEID=""/>
+      <ALBUM TITLE="Album &quot;Prime&quot;"/>
+      <INFO GENRE="Techno" KEY="F minor"/>
+      <TEMPO BPM="128.500"/>
+    </ENTRY>
+  </COLLECTION>
+  <SETS ENTRIES="0"/>
+  <PLAYLISTS>
+    <NODE TYPE="FOLDER" NAME="$ROOT">
+      <SUBNODES COUNT="1">
+        <NODE TYPE="PLAYLIST" NAME="Friday &amp; Night">
+          <PLAYLIST ENTRIES="1" TYPE="LIST">
+            <ENTRY><PRIMARYKEY TYPE="TRACK" KEY="C:/:Music/:Artist &amp; One - A &lt; B.mp3"/></ENTRY>
+          </PLAYLIST>
+        </NODE>
+      </SUBNODES>
+    </NODE>
+  </PLAYLISTS>
+</NML>

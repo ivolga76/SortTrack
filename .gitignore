@@ -1,0 +1,13 @@
+node_modules/
+.npm-cache/
+dist/
+target/
+.idea/
+.vscode/
+*.log
+*.tsbuildinfo
+data/
+src-tauri/target/
+rustup-init.exe
+work/r0/*.db*
+work/mvp-acceptance/

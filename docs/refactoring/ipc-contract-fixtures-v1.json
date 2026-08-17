@@ -1,0 +1,48 @@
+{
+  "schema": "sorttrack-ipc-dto-fixtures-1",
+  "scanOptions": {
+    "recursive": true,
+    "exclusions": ["archive", "temp/sets"]
+  },
+  "playlistExportRequest": {
+    "playlistId": "playlist-fixture",
+    "destinationPath": "D:\\Export\\fixture.nml",
+    "format": "traktor_nml",
+    "pathMode": "absolute",
+    "targetProfile": "traktor_pro_4"
+  },
+  "metadataValues": {
+    "title": "Fixture Track",
+    "artist": "Fixture Artist",
+    "album": null,
+    "albumArtist": null,
+    "trackNumber": "1",
+    "discNumber": null,
+    "genre": "Techno",
+    "year": "2026",
+    "composer": null,
+    "comment": null,
+    "bpm": 145,
+    "musicalKey": "F minor",
+    "camelot": "4A"
+  },
+  "bulkMetadataRequest": {
+    "trackIds": ["track-a", "track-b"],
+    "fields": ["genre", "bpm"],
+    "values": {
+      "title": null,
+      "artist": null,
+      "album": null,
+      "albumArtist": null,
+      "trackNumber": null,
+      "discNumber": null,
+      "genre": "Techno",
+      "year": null,
+      "composer": null,
+      "comment": null,
+      "bpm": 145,
+      "musicalKey": null,
+      "camelot": null
+    }
+  }
+}

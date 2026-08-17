@@ -1,0 +1,46 @@
+{
+  "name": "sorttrack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "packageManager": "npm@11.18.0",
+  "engines": {
+    "node": "24.16.0"
+  },
+  "scripts": {
+    "dev": "vite --configLoader runner",
+    "build": "tsc -p tsconfig.app.json --pretty false && vite build --configLoader runner",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "desktop:portable": "tauri build --no-bundle && node scripts/package-portable.mjs",
+    "portable:package": "node scripts/package-portable.mjs",
+    "release:stage": "node scripts/stage-release.mjs",
+    "release:metadata": "node scripts/release-manifest.mjs --output src-tauri/target/release/bundle/release src-tauri/target/release/bundle/release/SortTrack_0.1.0_x64-setup.exe src-tauri/target/release/bundle/release/SortTrackPortable-0.1.0-x64.zip",
+    "release:build": "tauri build && node scripts/package-portable.mjs && node scripts/stage-release.mjs && npm run release:metadata",
+    "release:verify": "node scripts/verify-release.mjs",
+    "test": "vitest run --configLoader runner",
+    "test:watch": "vitest --configLoader runner",
+    "typecheck": "tsc -p tsconfig.app.json --pretty false",
+    "ipc:check": "node scripts/ipc-contract.mjs docs/refactoring/ipc-contract-v1.json",
+    "acceptance:manifest": "node scripts/mvp-file-manifest.mjs",
+    "benchmark:generate": "node scripts/generate-benchmark-profile.mjs",
+    "benchmark:queries": "node scripts/benchmark-current-queries.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "typescript": "5.9.3",
+    "vite": "^8.0.16",
+    "vitest": "4.1.5"
+  }
+}
